@@ -37,7 +37,7 @@ export default function Index() {
         <div className="flex items-center gap-3">
           <span className="text-[#C0392B] text-2xl animate-flicker">★</span>
           <span className="font-display text-lg tracking-[0.2em] text-[#C8B98A] uppercase">
-            Восточный Фронт
+            World War 2
           </span>
         </div>
         <div className="hidden md:flex items-center gap-8">
@@ -199,10 +199,9 @@ export default function Index() {
               </div>
 
               {/* Статы */}
-              <div className="grid grid-cols-3 gap-4 mt-8">
+              <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                   { num: '2', label: 'Фракции' },
-                  { num: '10+', label: 'Карт' },
                   { num: '24/7', label: 'Онлайн' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center border border-[#C8B98A]/15 py-4 px-2"
