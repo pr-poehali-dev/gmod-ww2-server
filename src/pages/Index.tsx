@@ -84,8 +84,8 @@ export default function Index() {
           {/* Главный заголовок */}
           <h1 className="animate-fade-in-up delay-400 font-display font-bold leading-none mb-6"
             style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)', letterSpacing: '0.05em' }}>
-            <span className="block text-[#C8B98A]">ВОСТОЧНЫЙ</span>
-            <span className="block text-[#C0392B] animate-flicker" style={{ textShadow: '0 0 40px rgba(192,57,43,0.5)' }}>ФРОНТ</span>
+            <span className="block text-[#C8B98A]">WORLD</span>
+            <span className="block text-[#C0392B] animate-flicker" style={{ textShadow: '0 0 40px rgba(192,57,43,0.5)' }}>WAR 2</span>
           </h1>
 
           {/* Разделитель */}
