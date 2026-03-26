@@ -2,7 +2,7 @@ import Icon from '@/components/ui/icon';
 
 const DISCORD_URL = "https://discord.gg/4s6422bp";
 const HERO_BG = "https://cdn.poehali.dev/projects/8620edbf-773b-414c-a78b-f7fbaab7544a/files/b9477f4b-0c61-4c64-a258-46e690d7ad8e.jpg";
-const SOLDIERS_IMG = "https://cdn.poehali.dev/projects/8620edbf-773b-414c-a78b-f7fbaab7544a/files/cfc312f8-1581-45fb-9012-f3f8f8b9e686.jpg";
+const SOLDIERS_IMG = "https://cdn.poehali.dev/projects/8620edbf-773b-414c-a78b-f7fbaab7544a/files/1710038e-32a5-43bb-aa6a-601a36cecc89.jpg";
 
 const features = [
   {
