@@ -42,6 +42,8 @@ export default function Index() {
         </div>
         <div className="hidden md:flex items-center gap-8">
           <a href="#hero" className="font-display text-xs tracking-widest uppercase text-[#8B7D5A] hover:text-[#C8B98A] transition-colors">Главная</a>
+          <a href="#news" className="font-display text-xs tracking-widest uppercase text-[#8B7D5A] hover:text-[#C8B98A] transition-colors">Новости</a>
+          <a href="#rules" className="font-display text-xs tracking-widest uppercase text-[#8B7D5A] hover:text-[#C8B98A] transition-colors">Правила</a>
           <a href="#about" className="font-display text-xs tracking-widest uppercase text-[#8B7D5A] hover:text-[#C8B98A] transition-colors">О сервере</a>
           <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer"
             className="font-display text-xs tracking-widest uppercase px-5 py-2 bg-[#5865F2] text-white hover:bg-[#4752C4] transition-colors">
@@ -127,6 +129,97 @@ export default function Index() {
         {/* Нижний градиент */}
         <div className="absolute bottom-0 left-0 right-0 h-40"
           style={{ background: 'linear-gradient(to top, #0D0A07, transparent)' }} />
+      </section>
+
+      {/* ── НОВОСТИ ── */}
+      <section id="news" className="relative py-24 md:py-32 px-6">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C8B98A]/20 to-transparent" />
+        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="font-mono-custom text-xs tracking-[0.4em] uppercase text-[#8B7D5A] mb-4">— Сводка —</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-[#C8B98A] tracking-wider uppercase mb-6">
+              Новости проекта
+            </h2>
+            <div className="divider-star text-[#8B1A1A] text-lg max-w-xs mx-auto">✦</div>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              {
+                date: "25 МАР 2026",
+                tag: "Обновление",
+                title: "Открытие сервера",
+                desc: "Добро пожаловать на World War 2 RP! Сервер официально открыт. Выбирай сторону и вступай в бой.",
+              },
+              {
+                date: "26 МАР 2026",
+                tag: "Событие",
+                title: "Операция «Барбаросса»",
+                desc: "Первое масштабное событие — воссоздание начала Восточного фронта. Участвуй и получи уникальный знак отличия.",
+              },
+              {
+                date: "27 МАР 2026",
+                tag: "Патч",
+                title: "Обновление карт",
+                desc: "Добавлены новые локации: Сталинград и Прохоровка. Улучшена оптимизация и проработка укреплений.",
+              },
+              {
+                date: "28 МАР 2026",
+                tag: "Набор",
+                title: "Набор в администрацию",
+                desc: "Открыт набор модераторов и старших администраторов. Заявки принимаются в нашем Discord.",
+              },
+            ].map((n, i) => (
+              <div key={i} className="border border-[#C8B98A]/15 p-6 hover:border-[#C8B98A]/35 transition-colors duration-300"
+                style={{ background: 'rgba(200,185,138,0.03)' }}>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-mono-custom text-xs text-[#8B7D5A] tracking-widest">{n.date}</span>
+                  <span className="font-mono-custom text-xs text-[#C0392B] tracking-widest uppercase border border-[#C0392B]/40 px-2 py-0.5">{n.tag}</span>
+                </div>
+                <h3 className="font-display text-lg tracking-wider uppercase text-[#C8B98A] mb-2">{n.title}</h3>
+                <p className="text-[#8B7D5A] text-sm leading-relaxed">{n.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ПРАВИЛА ── */}
+      <section id="rules" className="relative py-24 md:py-32 px-6">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C8B98A]/20 to-transparent" />
+          <div className="absolute -right-20 top-1/2 -translate-y-1/2 text-[20rem] font-display font-bold text-[#C8B98A]/[0.02] leading-none select-none">
+            §
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="font-mono-custom text-xs tracking-[0.4em] uppercase text-[#8B7D5A] mb-4">— Устав —</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-[#C8B98A] tracking-wider uppercase mb-6">
+              Правила проекта
+            </h2>
+            <div className="divider-star text-[#8B1A1A] text-lg max-w-xs mx-auto">✦</div>
+          </div>
+          <div className="space-y-3">
+            {[
+              { num: "01", title: "Уважение", desc: "Запрещено оскорблять игроков, администрацию и третьих лиц. Общение только в уважительном тоне." },
+              { num: "02", title: "РП-режим", desc: "На сервере обязателен режим ролевой игры. Выход из персонажа (ООС) только в специальных зонах." },
+              { num: "03", title: "Читы и эксплойты", desc: "Использование сторонних программ, читов и эксплойтов карается перманентной блокировкой." },
+              { num: "04", title: "Командная игра", desc: "Запрещено убивать союзников (TK) без весомой ролевой причины. Нарушение — бан без предупреждения." },
+              { num: "05", title: "Ник и внешний вид", desc: "Никнейм и скин должны соответствовать эпохе. Запрещены имена с нецензурной лексикой." },
+              { num: "06", title: "Решения администрации", desc: "Решения администрации обязательны к исполнению. Апелляции подаются только через Discord." },
+            ].map((r, i) => (
+              <div key={i} className="flex gap-6 items-start border border-[#C8B98A]/10 p-5 hover:border-[#C8B98A]/25 hover:bg-[#C8B98A]/[0.02] transition-all duration-300">
+                <span className="font-display text-2xl font-bold text-[#8B1A1A]/60 shrink-0 mt-0.5">{r.num}</span>
+                <div>
+                  <h3 className="font-display text-base tracking-wider uppercase text-[#C8B98A] mb-1">{r.title}</h3>
+                  <p className="text-[#8B7D5A] text-sm leading-relaxed">{r.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ── О СЕРВЕРЕ ── */}
